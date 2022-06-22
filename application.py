@@ -16,7 +16,7 @@ def home():
     return render_template("index.html", map=html_map)
 
 def get_s3_map_html():
-    #Creating Session With Boto3.
+    #Creating Session With Boto3. #
     session = boto3.Session(
         aws_access_key_id="AKIA2NJREBXTNX2VV4RY",
         aws_secret_access_key="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"
