@@ -29,5 +29,4 @@ def get_s3_map_html():
     return obj.get()['Body'].read()
 
 if __name__ == '__main__':
-    # application.debug = True
     application.run()
