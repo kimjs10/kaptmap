@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import boto3
+import os
 
 application = Flask(__name__)
 
@@ -18,8 +19,8 @@ def home():
 def get_s3_map_html():
     #Creating Session With Boto3.
     session = boto3.Session(
-        aws_access_key_id="AKIA2NJREBXTNX2VV4RY",
-        aws_secret_access_key="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"
+        aws_access_key_id=os.environ["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=os.environ["AWS_SECRET_ACCESS_KEY"]
     )
 
     #Creating S3 Resource From the Session.
